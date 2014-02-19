@@ -129,6 +129,7 @@ execute this action'
         urltool = getToolByName(aq_inner(self.context), "portal_url")
         portal = urltool.getPortalObject()
         email_charset = portal.getProperty('email_charset')
+        from_address = portal.getProperty('email_from_address')
         if not source:
             # no source provided, looking for the site wide from email
             # address
